@@ -1,2 +1,5 @@
 # ... existing entries ...
 .env 
+
+/index.html
+/market_indices.csv
