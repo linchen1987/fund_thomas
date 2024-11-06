@@ -1,0 +1,5 @@
+yfinance
+pandas
+plotly
+cos-python-sdk-v5
+python-dotenv==1.0.0
