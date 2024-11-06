@@ -172,10 +172,15 @@ def upload_to_cos(local_file, cos_file):
         client = CosS3Client(config)
         
         # 上传文件
+        headers = {}
+        if cos_file.endswith('.html'):
+            headers['Content-Disposition'] = 'inline'
+            
         response = client.upload_file(
             Bucket=bucket,
             LocalFilePath=local_file,
-            Key=cos_file
+            Key=cos_file,
+            Headers=headers
         )
         
         print(f"文件 {local_file} 已成功上传到 COS: {cos_file}")
