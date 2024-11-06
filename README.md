@@ -9,3 +9,14 @@
 - 自动更新数据：使用 Github Action 每日自动出发任务，自动记录当天资产价格
 - 使用腾讯云 COS 存储数据
 - 网页可视化展示
+
+## 本地运行
+```
+pip install -r requirements.txt
+
+python update_market_indices.py
+```
+
+## 使用 github action 和 腾讯云
+1. 在腾讯云开通 COS, 创建存储桶
+2. 将 .env.templates 中的配置填写到 Github - 你的 repo - settings - secrets and variables - actions 中
